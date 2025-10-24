@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUKICKS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-main container">
+
+      <div class="nav-left">
+        <h1 class="brand-name">DUKICKS</h1>
+      </div>
+
+      <nav class="nav-center" id="navMenu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="icons">
+          <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Buscar...">
+          </div>
+          <i class="fa fa-search search-icon" id="searchIcon"></i>
+          <i class="fa fa-user"></i>
+          
+          <!-- Ícono del carrito con contador -->
+          <div class="cart-icon-container">
+            <i class="fa fa-shopping-bag" id="cartIcon"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+          
+          <i class="fa fa-bars menu-toggle" id="menuToggle"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Carrito lateral -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>TU CARRITO</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+      <div class="empty-cart-message">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Tu carrito está vacío</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-amount" id="totalAmount">$0 MXN</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">PROCEDER AL PAGO</button>
+      <button class="btn-continue-shopping" id="continueShopping">SEGUIR COMPRANDO</button>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <main class="hero-section">
+    <div class="container">
+      <h2 class="hero-title">PLAYERAS CON ACTITUD</h2>
+      <p class="hero-subtitle">Diseños únicos que reflejan tu estilo. Calidad premium y sostenibilidad en cada prenda.</p>
+      <a href="#" class="btn-primary">VER NUEVA COLECCIÓN</a>
+    </div>
+  </main>
+
+  <section class="featured-products">
+    <div class="container">
+      <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
+      <div class="products-grid">
+        <div class="product-card" data-id="1" data-name="Playera Urban Black" data-price="499">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/333333/FFFFFF?text=URBAN+BLACK" alt="Playera Urban Black">
+          </div>
+          <div class="product-info">
+            <h3>Playera Urban Black</h3>
+            <p class="product-description">Diseño urbano en negro clásico</p>
+            <p class="product-price">$499 MXN</p>
+            <!-- En cada product-card, cambia el botón por: -->
+            <a href="producto.html" class="btn-secondary">VER DETALLES</a>
+          </div>
+        </div>
+        <div class="product-card" data-id="2" data-name="Playera Street Gold" data-price="549">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/FFD700/000000?text=STREET+GOLD" alt="Playera Street Gold">
+          </div>
+          <div class="product-info">
+            <h3>Playera Street Gold</h3>
+            <p class="product-description">Amarillo vibrante con estilo callejero</p>
+            <p class="product-price">$549 MXN</p>
+            <button class="btn-secondary add-to-cart">Agregar al Carrito</button>
+          </div>
+        </div>
+        <div class="product-card" data-id="3" data-name="Playera Premium White" data-price="599">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/FFFFFF/333333?text=PREMIUM+WHITE" alt="Playera Premium White">
+          </div>
+          <div class="product-info">
+            <h3>Playera Premium White</h3>
+            <p class="product-description">Blanco puro con acabado premium</p>
+            <p class="product-price">$599 MXN</p>
+            <button class="btn-secondary add-to-cart">Agregar al Carrito</button>
+          </div>
+        </div>
+        <div class="product-card" data-id="4" data-name="Playera Red Velvet" data-price="579">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/800020/FFFFFF?text=RED+VELVET" alt="Playera Red Velvet">
+          </div>
+          <div class="product-info">
+            <h3>Playera Red Velvet</h3>
+            <p class="product-description">Rojo intenso con textura premium</p>
+            <p class="product-price">$579 MXN</p>
+            <button class="btn-secondary add-to-cart">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="container">
+      <h2 class="section-title">POR QUÉ ELEGIR DUKICKS</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-tshirt"></i>
+          <h3>Calidad Premium</h3>
+          <p>Materiales de la más alta calidad que garantizan durabilidad y comfort.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Sostenibilidad</h3>
+          <p>Producimos de manera responsable con el medio ambiente.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Envío Gratis</h3>
+          <p>Envio gratuito en compras superiores a $999 MXN.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-medal"></i>
+          <h3>Garantía</h3>
+          <p>30 días de garantía en todos nuestros productos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">LO QUE DICEN NUESTROS CLIENTES</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Las playeras de DUKICKS son increíbles. La calidad supera mis expectativas y los diseños son únicos."</p>
+          </div>
+          <div class="testimonial-author">
+            <h4>Carlos Rodríguez</h4>
+            <span>Cliente frecuente</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Excelente atención al cliente y envío rápido. Definitivamente mi nueva marca favorita de ropa."</p>
+          </div>
+          <div class="testimonial-author">
+            <h4>Ana Martínez</h4>
+            <span>Primera compra</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"La comodidad y estilo se unen perfectamente en cada prenda. ¡Totalmente recomendado!"</p>
+          </div>
+          <div class="testimonial-author">
+            <h4>David López</h4>
+            <span>Cliente desde 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>ÚNETE A LA COMUNIDAD DUKICKS</h2>
+        <p>Recibe un 15% de descuento en tu primera compra y sé el primero en conocer nuestros nuevos lanzamientos.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn-primary">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DUKICKS</h3>
+          <p>Playeras con actitud para personas auténticas. Calidad, estilo y sostenibilidad.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Nueva Colección</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Tallas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> hola@dukicks.com</li>
+            <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+            <li><i class="fas fa-map-marker-alt"></i> CDMX, México</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DUKICKS. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

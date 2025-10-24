@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - DUKICKS</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-main container">
+      <div class="nav-left">
+        <h1 class="brand-name">DUKICKS</h1>
+      </div>
+
+      <nav class="nav-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="icons">
+          <i class="fa fa-user"></i>
+          <div class="cart-icon-container">
+            <i class="fa fa-shopping-bag" id="cartIcon"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb">
+    <div class="container">
+      <nav>
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <a href="tienda.html">Tienda</a>
+        <span>/</span>
+        <a href="checkout.html" class="current">Checkout</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Proceso de Checkout -->
+  <section class="checkout-process">
+    <div class="container">
+      <!-- Pasos del Checkout -->
+      <div class="checkout-steps">
+        <div class="step active" data-step="1">
+          <div class="step-number">1</div>
+          <div class="step-label">Información</div>
+        </div>
+        <div class="step" data-step="2">
+          <div class="step-number">2</div>
+          <div class="step-label">Envío</div>
+        </div>
+        <div class="step" data-step="3">
+          <div class="step-number">3</div>
+          <div class="step-label">Pago</div>
+        </div>
+        <div class="step" data-step="4">
+          <div class="step-number">4</div>
+          <div class="step-label">Confirmación</div>
+        </div>
+      </div>
+
+      <div class="checkout-layout">
+        <!-- Formularios -->
+        <div class="checkout-forms">
+          <!-- Paso 1: Información del Cliente -->
+          <form class="checkout-form active" id="customerInfoForm">
+            <h2>Información del Cliente</h2>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">Nombre *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Apellido *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-continue" data-next-step="2">Continuar a Envío</button>
+            </div>
+          </form>
+
+          <!-- Paso 2: Dirección de Envío -->
+          <form class="checkout-form" id="shippingForm">
+            <h2>Dirección de Envío</h2>
+            
+            <div class="form-group">
+              <label for="address">Dirección *</label>
+              <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="city">Ciudad *</label>
+                <input type="text" id="city" name="city" required>
+              </div>
+              <div class="form-group">
+                <label for="state">Estado *</label>
+                <select id="state" name="state" required>
+                  <option value="">Seleccionar estado</option>
+                  <option value="CDMX">CDMX</option>
+                  <option value="Edo. México">Estado de México</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="Nuevo León">Nuevo León</option>
+                  <option value="Puebla">Puebla</option>
+                  <option value="Veracruz">Veracruz</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="postalCode">Código Postal *</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+              </div>
+              <div class="form-group">
+                <label for="country">País *</label>
+                <input type="text" id="country" name="country" value="México" readonly>
+              </div>
+            </div>
+
+            <div class="shipping-methods">
+              <h3>Método de Envío</h3>
+              <div class="shipping-options">
+                <label class="shipping-option">
+                  <input type="radio" name="shippingMethod" value="standard" checked>
+                  <div class="option-content">
+                    <span class="option-name">Envío Estándar</span>
+                    <span class="option-price">$99 MXN</span>
+                    <span class="option-time">5-7 días hábiles</span>
+                  </div>
+                </label>
+                <label class="shipping-option">
+                  <input type="radio" name="shippingMethod" value="express">
+                  <div class="option-content">
+                    <span class="option-name">Envío Express</span>
+                    <span class="option-price">$199 MXN</span>
+                    <span class="option-time">2-3 días hábiles</span>
+                  </div>
+                </label>
+                <label class="shipping-option">
+                  <input type="radio" name="shippingMethod" value="free">
+                  <div class="option-content">
+                    <span class="option-name">Envío Gratis</span>
+                    <span class="option-price">$0 MXN</span>
+                    <span class="option-time">5-7 días hábiles</span>
+                    <small class="option-note">En compras mayores a $999 MXN</small>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-back" data-prev-step="1">Regresar</button>
+              <button type="button" class="btn-continue" data-next-step="3">Continuar a Pago</button>
+            </div>
+          </form>
+
+          <!-- Paso 3: Información de Pago -->
+          <form class="checkout-form" id="paymentForm">
+            <h2>Información de Pago</h2>
+            
+            <div class="payment-methods">
+              <div class="payment-tabs">
+                <button type="button" class="payment-tab active" data-method="card">Tarjeta</button>
+                <button type="button" class="payment-tab" data-method="paypal">PayPal</button>
+                <button type="button" class="payment-tab" data-method="oxxo">OXXO</button>
+              </div>
+
+              <!-- Tarjeta de Crédito/Débito -->
+              <div class="payment-content active" id="cardContent">
+                <div class="form-group">
+                  <label for="cardNumber">Número de Tarjeta *</label>
+                  <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                  <div class="card-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="cardName">Nombre en la Tarjeta *</label>
+                    <input type="text" id="cardName" name="cardName">
+                  </div>
+                  <div class="form-group">
+                    <label for="cardCvv">CVV *</label>
+                    <input type="text" id="cardCvv" name="cardCvv" maxlength="3" placeholder="123">
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="cardExpiry">Fecha de Expiración *</label>
+                    <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA">
+                  </div>
+                </div>
+              </div>
+
+              <!-- PayPal -->
+              <div class="payment-content" id="paypalContent">
+                <div class="paypal-info">
+                  <i class="fab fa-paypal"></i>
+                  <p>Serás redirigido a PayPal para completar tu pago de manera segura.</p>
+                  <button type="button" class="btn-paypal">Pagar con PayPal</button>
+                </div>
+              </div>
+
+              <!-- OXXO -->
+              <div class="payment-content" id="oxxoContent">
+                <div class="oxxo-info">
+                  <i class="fas fa-store"></i>
+                  <p>Recibirás un código de barras para pagar en cualquier tienda OXXO.</p>
+                  <div class="oxxo-instructions">
+                    <h4>Instrucciones:</h4>
+                    <ol>
+                      <li>Completa tu pedido</li>
+                      <li>Recibe tu código de barras por email</li>
+                      <li>Paga en cualquier tienda OXXO</li>
+                      <li>Tu pedido será enviado después del pago</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-back" data-prev-step="2">Regresar</button>
+              <button type="submit" class="btn-complete-order">COMPLETAR PEDIDO</button>
+            </div>
+          </form>
+
+          <!-- Paso 4: Confirmación -->
+          <div class="checkout-form" id="confirmationStep">
+            <div class="confirmation-content">
+              <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h2>¡Pedido Confirmado!</h2>
+              <p class="order-number">Número de pedido: <strong>#DK2024-001</strong></p>
+              <p class="confirmation-message">
+                Gracias por tu compra. Hemos enviado un correo de confirmación a 
+                <strong id="confirmationEmail">correo@ejemplo.com</strong>
+              </p>
+              
+              <div class="order-summary-confirm">
+                <h3>Resumen del Pedido</h3>
+                <div id="orderSummaryConfirm"></div>
+              </div>
+
+              <div class="confirmation-actions">
+                <a href="index.html" class="btn-primary">Volver al Inicio</a>
+                <a href="tienda.html" class="btn-secondary">Seguir Comprando</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resumen del Pedido -->
+        <aside class="order-summary">
+          <h3>Resumen del Pedido</h3>
+          <div class="order-items" id="orderItems">
+            <!-- Los productos se cargarán aquí -->
+          </div>
+          
+          <div class="order-totals">
+            <div class="total-row">
+              <span>Subtotal</span>
+              <span id="subtotal">$0 MXN</span>
+            </div>
+            <div class="total-row">
+              <span>Envío</span>
+              <span id="shippingCost">$0 MXN</span>
+            </div>
+            <div class="total-row discount">
+              <span>Descuento</span>
+              <span id="discount">-$0 MXN</span>
+            </div>
+            <div class="total-row grand-total">
+              <span>Total</span>
+              <span id="grandTotal">$0 MXN</span>
+            </div>
+          </div>
+
+          <div class="security-badges">
+            <div class="security-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>Pago 100% Seguro</span>
+            </div>
+            <div class="security-badge">
+              <i class="fas fa-lock"></i>
+              <span>Datos Protegidos</span>
+            </div>
+            <div class="security-badge">
+              <i class="fas fa-truck"></i>
+              <span>Envío Garantizado</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DUKICKS</h3>
+          <p>Playeras con actitud para personas auténticas. Calidad, estilo y sostenibilidad.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="#">Nueva Colección</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Guía de Tallas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> hola@dukicks.com</li>
+            <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+            <li><i class="fas fa-map-marker-alt"></i> CDMX, México</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DUKICKS. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

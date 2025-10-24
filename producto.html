@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playera Urban Black - DUKICKS</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/producto.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-main container">
+      <div class="nav-left">
+        <h1 class="brand-name">DUKICKS</h1>
+      </div>
+
+      <nav class="nav-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="icons">
+          <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Buscar...">
+          </div>
+          <i class="fa fa-search search-icon" id="searchIcon"></i>
+          <i class="fa fa-user"></i>
+          
+          <div class="cart-icon-container">
+            <i class="fa fa-shopping-bag" id="cartIcon"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+          
+          <i class="fa fa-bars menu-toggle" id="menuToggle"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Carrito lateral -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>TU CARRITO</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart-message">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Tu carrito está vacío</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-amount" id="totalAmount">$0 MXN</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">PROCEDER AL PAGO</button>
+      <button class="btn-continue-shopping" id="continueShopping">SEGUIR COMPRANDO</button>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb">
+    <div class="container">
+      <nav>
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <a href="#">Tienda</a>
+        <span>/</span>
+        <a href="#" class="current">Playera Urban Black</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Detalles del Producto -->
+  <section class="product-details">
+    <div class="container">
+      <div class="product-details-grid">
+        <!-- Galería de Imágenes -->
+        <div class="product-gallery">
+          <div class="main-image">
+            <img src="https://via.placeholder.com/600x600/333333/FFFFFF?text=URBAN+BLACK+FRONT" alt="Playera Urban Black - Frente" id="mainImage">
+          </div>
+          <div class="image-thumbnails">
+            <div class="thumbnail active" data-image="https://via.placeholder.com/600x600/333333/FFFFFF?text=URBAN+BLACK+FRONT">
+              <img src="https://via.placeholder.com/100x100/333333/FFFFFF?text=1" alt="Vista frontal">
+            </div>
+            <div class="thumbnail" data-image="https://via.placeholder.com/600x600/555555/FFFFFF?text=URBAN+BLACK+BACK">
+              <img src="https://via.placeholder.com/100x100/555555/FFFFFF?text=2" alt="Vista trasera">
+            </div>
+            <div class="thumbnail" data-image="https://via.placeholder.com/600x600/777777/FFFFFF?text=URBAN+BLACK+DETAIL">
+              <img src="https://via.placeholder.com/100x100/777777/FFFFFF?text=3" alt="Detalle">
+            </div>
+            <div class="thumbnail" data-image="https://via.placeholder.com/600x600/999999/FFFFFF?text=URBAN+BLACK+FABRIC">
+              <img src="https://via.placeholder.com/100x100/999999/FFFFFF?text=4" alt="Textura">
+            </div>
+          </div>
+        </div>
+
+        <!-- Información del Producto -->
+        <div class="product-info">
+          <h1 class="product-title">Playera Urban Black</h1>
+          <div class="product-price">$499 MXN</div>
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="rating-text">(4.5/5 - 28 reseñas)</span>
+          </div>
+
+          <div class="product-description">
+            <p>Playera de corte moderno en color negro clásico. Perfecta para looks urbanos y casuales. Fabricada con algodón 100% premium para máxima comodidad y durabilidad.</p>
+          </div>
+
+          <!-- Selector de Tallas -->
+          <div class="size-selector">
+            <label>Talla:</label>
+            <div class="size-options">
+              <input type="radio" name="size" id="size-s" value="S" checked>
+              <label for="size-s" class="size-option">S</label>
+              
+              <input type="radio" name="size" id="size-m" value="M">
+              <label for="size-m" class="size-option">M</label>
+              
+              <input type="radio" name="size" id="size-l" value="L">
+              <label for="size-l" class="size-option">L</label>
+              
+              <input type="radio" name="size" id="size-xl" value="XL">
+              <label for="size-xl" class="size-option">XL</label>
+            </div>
+            <a href="#" class="size-guide-link">Guía de tallas</a>
+          </div>
+
+          <!-- Selector de Cantidad -->
+          <div class="quantity-selector">
+            <label>Cantidad:</label>
+            <div class="quantity-controls">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1" max="10">
+              <button class="quantity-btn plus">+</button>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="product-actions">
+            <button class="btn-primary add-to-cart-btn" data-product-id="1" data-product-name="Playera Urban Black" data-product-price="499">
+              <i class="fas fa-shopping-cart"></i>
+              AGREGAR AL CARRITO
+            </button>
+            <button class="btn-secondary buy-now-btn">
+              <i class="fas fa-bolt"></i>
+              COMPRAR AHORA
+            </button>
+          </div>
+
+          <!-- Envío y Garantías -->
+          <div class="product-features">
+            <div class="feature">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Envío gratis en compras +$999</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-undo"></i>
+              <span>30 días para devoluciones</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-shield-alt"></i>
+              <span>Garantía de calidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Descripción Detallada -->
+  <section class="product-description-detail">
+    <div class="container">
+      <div class="description-tabs">
+        <button class="tab-button active" data-tab="description">Descripción</button>
+        <button class="tab-button" data-tab="specs">Especificaciones</button>
+        <button class="tab-button" data-tab="reviews">Reseñas</button>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="description">
+          <h3>Playera Urban Black - Estilo y Comodidad</h3>
+          <p>Nuestra Playera Urban Black está diseñada para quienes buscan estilo y comodidad en su día a día. Con un corte moderno que se adapta perfectamente a tu cuerpo, esta playera es ideal para cualquier ocasión.</p>
+          
+          <h4>Características principales:</h4>
+          <ul>
+            <li>✅ 100% algodón premium peinado</li>
+            <li>✅ Corte regular fit (ni ajustado ni holgado)</li>
+            <li>✅ Cuello redondo con ribete doble para mayor durabilidad</li>
+            <li>✅ Costuras reforzadas en hombros y mangas</li>
+            <li>✅ Lavado previo para evitar encogimiento</li>
+            <li>✅ Diseño unisex</li>
+          </ul>
+
+          <h4>Cuidado de la prenda:</h4>
+          <p>Lavar en agua fría, no usar blanqueador, secar a baja temperatura o al aire libre, planchar a temperatura media.</p>
+        </div>
+
+        <div class="tab-pane" id="specs">
+          <table class="specs-table">
+            <tr>
+              <td><strong>Material</strong></td>
+              <td>100% Algodón Premium</td>
+            </tr>
+            <tr>
+              <td><strong>Peso de la tela</strong></td>
+              <td>180 g/m²</td>
+            </tr>
+            <tr>
+              <td><strong>Color</strong></td>
+              <td>Negro sólido</td>
+            </tr>
+            <tr>
+              <td><strong>Origen</strong></td>
+              <td>Hecho en México</td>
+            </tr>
+            <tr>
+              <td><strong>Cuidado</strong></td>
+              <td>Lavable a máquina</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="tab-pane" id="reviews">
+          <div class="reviews-summary">
+            <div class="average-rating">
+              <div class="rating-number">4.5</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="total-reviews">28 reseñas</div>
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="review-header">
+              <div class="reviewer">Carlos Rodríguez</div>
+              <div class="review-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>"Excelente calidad de la tela y el corte es perfecto. La uso regularmente y mantiene su forma después de varios lavados."</p>
+            </div>
+            <div class="review-date">Hace 2 semanas</div>
+          </div>
+
+          <div class="review">
+            <div class="review-header">
+              <div class="reviewer">Ana Martínez</div>
+              <div class="review-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="review-content">
+              <p>"Muy cómoda y de buena calidad. El color negro es intenso y no se destiñe. Recomiendo tallar una talla más grande si prefieres un fit más holgado."</p>
+            </div>
+            <div class="review-date">Hace 1 mes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos Relacionados -->
+  <section class="related-products">
+    <div class="container">
+      <h2 class="section-title">PRODUCTOS RELACIONADOS</h2>
+      <div class="products-grid">
+        <div class="product-card" data-id="2" data-name="Playera Street Gold" data-price="549">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/FFD700/000000?text=STREET+GOLD" alt="Playera Street Gold">
+          </div>
+          <div class="product-info">
+            <h3>Playera Street Gold</h3>
+            <p class="product-description">Amarillo vibrante con estilo callejero</p>
+            <p class="product-price">$549 MXN</p>
+            <a href="producto-street-gold.html" class="btn-secondary">VER DETALLES</a>
+          </div>
+        </div>
+        <div class="product-card" data-id="3" data-name="Playera Premium White" data-price="599">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/FFFFFF/333333?text=PREMIUM+WHITE" alt="Playera Premium White">
+          </div>
+          <div class="product-info">
+            <h3>Playera Premium White</h3>
+            <p class="product-description">Blanco puro con acabado premium</p>
+            <p class="product-price">$599 MXN</p>
+            <a href="producto-premium-white.html" class="btn-secondary">VER DETALLES</a>
+          </div>
+        </div>
+        <div class="product-card" data-id="4" data-name="Playera Red Velvet" data-price="579">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x300/800020/FFFFFF?text=RED+VELVET" alt="Playera Red Velvet">
+          </div>
+          <div class="product-info">
+            <h3>Playera Red Velvet</h3>
+            <p class="product-description">Rojo intenso con textura premium</p>
+            <p class="product-price">$579 MXN</p>
+            <a href="producto-red-velvet.html" class="btn-secondary">VER DETALLES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DUKICKS</h3>
+          <p>Playeras con actitud para personas auténticas. Calidad, estilo y sostenibilidad.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Nueva Colección</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Guía de Tallas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> hola@dukicks.com</li>
+            <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+            <li><i class="fas fa-map-marker-alt"></i> CDMX, México</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DUKICKS. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/producto.js"></script>
+</body>
+</html>
