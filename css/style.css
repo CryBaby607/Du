@@ -1151,3 +1151,344 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* ================================== */
+/* PÁGINA DE TIENDA Y FILTROS         */
+/* ================================== */
+
+/* Hero de Tienda */
+.shop-hero {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 3rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.shop-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+}
+
+.shop-hero p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* Layout Principal de la Tienda */
+.shop-content {
+  padding: 2rem 0 5rem;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Columna de filtros (280px) y columna de productos (1fr) */
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Sidebar de Filtros */
+.filters-sidebar {
+  background: var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: sticky;
+  top: 90px; /* Debajo del navbar fijo */
+  box-shadow: var(--shadow);
+}
+
+.filters-sidebar h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+.filter-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.filter-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos de Opciones de Filtro (Checkboxes Estilizados) */
+.filter-options label.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.filter-options input[type="checkbox"] {
+  /* Ocultar checkbox nativo */
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.filter-options .checkmark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--medium-gray);
+  margin-right: 10px;
+  position: relative;
+  border-radius: 3px;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.filter-options input[type="checkbox"]:checked + .checkmark {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.filter-options input[type="checkbox"]:checked + .checkmark::after {
+  content: '\f00c'; /* Icono de check */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+}
+
+/* Filtro de Precio */
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-inputs input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn-filter-apply {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.btn-filter-apply:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Filtro de Tallas (Radio Buttons Estilizados) */
+.size-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.size-filters input[type="checkbox"] {
+  display: none;
+}
+
+.size-filter-option .size-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--medium-gray);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.size-filters input[type="checkbox"]:checked + .size-checkbox {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.size-filter-option .size-checkbox:hover {
+  border-color: var(--primary-color);
+}
+
+/* Filtro de Colores (Swatches) */
+.color-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.color-filters label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.color-filters input[type="checkbox"]:checked + .color-swatch::after {
+  content: '\f00c'; /* Icono de check */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+  text-shadow: 0 0 5px rgba(0,0,0,0.5); /* Sombra para visibilidad en colores claros */
+}
+
+/* Botones de Acción de Filtro */
+.filter-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Barra de Herramientas de Productos */
+.products-area {
+  padding-top: 1.5rem;
+}
+
+.products-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--medium-gray);
+  padding-bottom: 1rem;
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.sort-options label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.sort-options select {
+  padding: 0.5rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.page-btn {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--medium-gray);
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.page-btn:hover {
+  background: var(--light-gray);
+  border-color: var(--primary-color);
+}
+
+.page-btn.active {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  border-color: var(--accent-color);
+}
+
+.page-dots {
+  color: var(--dark-gray);
+}
+
+/* RESPONSIVE DE LA PÁGINA DE TIENDA */
+@media (max-width: 992px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .filters-sidebar {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .shop-hero h1 {
+    font-size: 2rem;
+  }
+
+  .products-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

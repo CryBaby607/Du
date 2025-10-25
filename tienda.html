@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/tienda.css">
+  <link rel="stylesheet" href="css/producto.css">
 </head>
 <body>
   <header class="navbar">
@@ -22,7 +23,7 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="tienda.html" class="active">Tienda</a></li>
           <li><a href="quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="checkout.html">Contacto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
 
@@ -45,14 +46,12 @@
     </div>
   </header>
 
-  <!-- Carrito lateral -->
   <div class="cart-sidebar" id="cartSidebar">
     <div class="cart-header">
       <h3>TU CARRITO</h3>
       <button class="close-cart" id="closeCart">&times;</button>
     </div>
     <div class="cart-items" id="cartItems">
-      <!-- Los productos del carrito se agregarán aquí dinámicamente -->
       <div class="empty-cart-message">
         <i class="fas fa-shopping-bag"></i>
         <p>Tu carrito está vacío</p>
@@ -70,35 +69,23 @@
 
   <div class="cart-overlay" id="cartOverlay"></div>
 
-  <!-- Breadcrumb -->
   <section class="breadcrumb">
     <div class="container">
       <nav>
         <a href="index.html">Inicio</a>
-        <span>/</span>
+        <span>/</span> 
         <a href="tienda.html" class="current">Tienda</a>
       </nav>
     </div>
   </section>
 
-  <!-- Hero de Tienda -->
-  <section class="shop-hero">
-    <div class="container">
-      <h1>TIENDA DUKICKS</h1>
-      <p>Descubre nuestra colección completa de playeras con actitud</p>
-    </div>
-  </section>
-
-  <!-- Filtros y Productos -->
   <section class="shop-content">
     <div class="container">
       <div class="shop-layout">
-        <!-- Sidebar de Filtros -->
         <aside class="filters-sidebar">
           <div class="filter-group">
             <h3>Filtrar por</h3>
             
-            <!-- Filtro de Categorías -->
             <div class="filter-section">
               <h4>Categorías</h4>
               <div class="filter-options">
@@ -120,7 +107,6 @@
               </div>
             </div>
 
-            <!-- Filtro de Precio -->
             <div class="filter-section">
               <h4>Precio</h4>
               <div class="price-filter">
@@ -133,7 +119,6 @@
               </div>
             </div>
 
-            <!-- Filtro de Tallas -->
             <div class="filter-section">
               <h4>Tallas</h4>
               <div class="size-filters">
@@ -156,7 +141,6 @@
               </div>
             </div>
 
-            <!-- Filtro de Colores -->
             <div class="filter-section">
               <h4>Colores</h4>
               <div class="color-filters">
@@ -183,7 +167,6 @@
               </div>
             </div>
 
-            <!-- Botones de Filtro -->
             <div class="filter-actions">
               <button class="btn-primary" id="applyFilters">APLICAR FILTROS</button>
               <button class="btn-secondary" id="resetFilters">LIMPIAR FILTROS</button>
@@ -191,9 +174,7 @@
           </div>
         </aside>
 
-        <!-- Área de Productos -->
         <main class="products-area">
-          <!-- Barra de Herramientas -->
           <div class="products-toolbar">
             <div class="results-count">
               Mostrando <span id="productsCount">8</span> productos
@@ -210,12 +191,9 @@
             </div>
           </div>
 
-          <!-- Grid de Productos -->
           <div class="products-grid" id="productsGrid">
-            <!-- Los productos se cargarán dinámicamente aquí -->
-          </div>
+            </div>
 
-          <!-- Paginación -->
           <div class="pagination">
             <button class="page-btn active">1</button>
             <button class="page-btn">2</button>
