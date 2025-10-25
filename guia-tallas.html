@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Tallas - DUKICKS</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/producto.css"> <style>
+    /* Contenido General */
+    .info-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .info-content p {
+        line-height: 1.7;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    /* Tabla de Tallas */
+    .size-table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+      border-radius: 10px;
+    }
+
+    .size-table {
+      width: 100%;
+      min-width: 600px; /* Para asegurar que la tabla no se colapse demasiado en móvil */
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    .size-table th, .size-table td {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--medium-gray);
+    }
+
+    .size-table th {
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    .size-table td {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
+    .size-table tr:nth-child(odd) td {
+      background-color: var(--light-gray);
+    }
+    
+    .guide-image {
+        max-width: 300px;
+        margin: 2rem auto;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="navbar">
+    <div class="nav-main container">
+      <div class="nav-left">
+        <h1 class="brand-name">DUKICKS</h1>
+      </div>
+
+      <nav class="nav-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="icons">
+          <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Buscar...">
+          </div>
+          <i class="fa fa-search search-icon" id="searchIcon"></i>
+          <i class="fa fa-user"></i>
+          
+          <div class="cart-icon-container">
+            <i class="fa fa-shopping-bag" id="cartIcon"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+          
+          <i class="fa fa-bars menu-toggle" id="menuToggle"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-sidebar" id="cartSidebar"></div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <section class="breadcrumb">
+    <div class="container">
+      <nav>
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <a href="guia-tallas.html" class="current">Guía de Tallas</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="featured-products"> <div class="container">
+      <h2 class="section-title">GUÍA DE TALLAS - UNISEX</h2>
+      
+      <div class="info-content">
+        <p>Utiliza esta tabla para encontrar el ajuste perfecto para tu playera DUKICKS. Todas las medidas son en **centímetros (cm)** y corresponden a la prenda extendida.</p>
+
+        <div class="guide-image">
+            <img src="https://via.placeholder.com/300x300/FFD700/000000?text=MEDIDAS" alt="Guía de cómo medir una playera" style="width: 100%; height: auto; display: block;">
+        </div>
+        
+        <div class="size-table-container">
+            <table class="size-table">
+                <thead>
+                    <tr>
+                        <th>Talla</th>
+                        <th>Pecho (Axila a Axila)</th>
+                        <th>Largo (Hombro a Bajo)</th>
+                        <th>Manga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S (Chica)</td>
+                        <td>47 - 49 cm</td>
+                        <td>68 - 70 cm</td>
+                        <td>20 cm</td>
+                    </tr>
+                    <tr>
+                        <td>M (Mediana)</td>
+                        <td>50 - 52 cm</td>
+                        <td>71 - 73 cm</td>
+                        <td>21 cm</td>
+                    </tr>
+                    <tr>
+                        <td>L (Grande)</td>
+                        <td>53 - 55 cm</td>
+                        <td>74 - 76 cm</td>
+                        <td>22 cm</td>
+                    </tr>
+                    <tr>
+                        <td>XL (Extra Grande)</td>
+                        <td>56 - 58 cm</td>
+                        <td>77 - 79 cm</td>
+                        <td>23 cm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p style="margin-top: 3rem; font-size: 0.9rem; color: var(--dark-gray);">
+            *Tolerancia de medida: ± 1 cm. Recomendamos comparar estas medidas con una playera que ya te quede bien.
+            Si tienes dudas, <a href="contacto.html" style="color: var(--accent-color);">contáctanos</a> para asistencia personalizada.
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DUKICKS</h3>
+          <p>Playeras con actitud para personas auténticas. Calidad, estilo y sostenibilidad.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="#">Nueva Colección</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="envios-devoluciones.html">Envíos y Devoluciones</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="guia-tallas.html">Guía de Tallas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> hola@dukicks.com</li>
+            <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+            <li><i class="fas fa-map-marker-alt"></i> CDMX, México</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DUKICKS. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

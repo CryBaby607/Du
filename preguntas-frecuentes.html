@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - DUKICKS</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/producto.css"> <style>
+    /* Contenido General */
+    .info-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+    
+    /* Estilos del Acordeón */
+    .accordion {
+      margin-top: 2rem;
+      border: 1px solid var(--medium-gray);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--medium-gray);
+    }
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      background: var(--secondary-color);
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+    .accordion-header:hover {
+      background: var(--light-gray);
+    }
+
+    .accordion-header i {
+      color: var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active i {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      padding: 0 1.5rem;
+      background: var(--light-gray);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+
+    .accordion-content.active {
+      max-height: 500px; /* Suficiente para expandir el contenido */
+      padding: 1.5rem;
+    }
+
+    .accordion-content p {
+      margin: 0;
+      line-height: 1.7;
+      color: var(--text-color);
+    }
+
+  </style>
+</head>
+<body>
+  
+  <header class="navbar">
+    <div class="nav-main container">
+      <div class="nav-left">
+        <h1 class="brand-name">DUKICKS</h1>
+      </div>
+
+      <nav class="nav-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="icons">
+          <div class="search-box" id="searchBox">
+            <input type="text" placeholder="Buscar...">
+          </div>
+          <i class="fa fa-search search-icon" id="searchIcon"></i>
+          <i class="fa fa-user"></i>
+          
+          <div class="cart-icon-container">
+            <i class="fa fa-shopping-bag" id="cartIcon"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+          
+          <i class="fa fa-bars menu-toggle" id="menuToggle"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-sidebar" id="cartSidebar"></div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <section class="breadcrumb">
+    <div class="container">
+      <nav>
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <a href="preguntas-frecuentes.html" class="current">Preguntas Frecuentes</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="featured-products"> 
+    <div class="container">
+      <h2 class="section-title">PREGUNTAS FRECUENTES (FAQ)</h2>
+      
+      <div class="info-content">
+        <p style="text-align: center; margin-bottom: 3rem;">Encuentra respuestas rápidas a las preguntas más comunes sobre pedidos, productos y nuestra marca.</p>
+
+        <div class="accordion">
+
+          <div class="accordion-item">
+            <div class="accordion-header" data-target="faq-1">
+              ¿Cuánto tiempo tarda mi pedido en llegar?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content" id="faq-1">
+              <p>Ofrecemos **Envío Estándar** (5-7 días hábiles) y **Envío Express** (2-3 días hábiles). El tiempo de procesamiento es de 1 día hábil adicional. Consulta nuestra página de <a href="envios-devoluciones.html">Envíos y Devoluciones</a> para más detalles.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" data-target="faq-2">
+              ¿Qué métodos de pago aceptan?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content" id="faq-2">
+              <p>Aceptamos tarjetas de crédito y débito (**Visa, MasterCard, Amex**), **PayPal** para un pago rápido, y pagos en efectivo a través de **OXXO**. Todas las transacciones son 100% seguras y protegidas.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" data-target="faq-3">
+              ¿Puedo devolver o cambiar una playera?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content" id="faq-3">
+              <p>Sí. Tienes **30 días naturales** a partir de la recepción para solicitar una devolución o cambio, siempre y cuando la prenda esté sin usar, sin lavar y con sus etiquetas. Revisa nuestra <a href="envios-devoluciones.html">Política de Devoluciones</a> para iniciar el proceso.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" data-target="faq-4">
+              ¿Dónde puedo encontrar la guía de tallas?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content" id="faq-4">
+              <p>Puedes encontrar el enlace a la **Guía de Tallas** en la descripción de cada producto y en el pie de página. Recomendamos consultarla antes de comprar para asegurar el ajuste perfecto.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" data-target="faq-5">
+              ¿De qué material están hechas las playeras DUKICKS?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content" id="faq-5">
+              <p>La mayoría de nuestras playeras están fabricadas con **100% algodón premium peinado** con un peso de 180 g/m² o superior, lo que asegura comodidad, durabilidad y una textura suave. La información exacta del material se encuentra en la pestaña de Especificaciones de cada producto.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DUKICKS</h3>
+          <p>Playeras con actitud para personas auténticas. Calidad, estilo y sostenibilidad.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="#">Nueva Colección</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="envios-devoluciones.html">Envíos y Devoluciones</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="guia-tallas.html">Guía de Tallas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> hola@dukicks.com</li>
+            <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+            <li><i class="fas fa-map-marker-alt"></i> CDMX, México</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DUKICKS. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headers = document.querySelectorAll('.accordion-header');
+
+      headers.forEach(header => {
+        header.addEventListener('click', () => {
+          const targetId = header.getAttribute('data-target');
+          const content = document.getElementById(targetId);
+
+          // Alternar la clase 'active' en el header y el contenido
+          header.classList.toggle('active');
+          content.classList.toggle('active');
+
+          // Opcional: Cerrar otros acordeones (comentar si quieres que varios estén abiertos)
+          headers.forEach(otherHeader => {
+            if (otherHeader !== header && otherHeader.classList.contains('active')) {
+              otherHeader.classList.remove('active');
+              document.getElementById(otherHeader.getAttribute('data-target')).classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
