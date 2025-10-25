@@ -535,6 +535,7 @@ body {
   width: 100%;
   letter-spacing: 0.5px;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 
 .btn-secondary:hover {

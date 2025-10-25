@@ -26,6 +26,22 @@
   position: relative;
 }
 
+/* ================================== */
+/* AJUSTES PARA APROVECHAR ESPACIO LATERAL (TIENDA) */
+/* ================================== */
+
+/* 1. Anula el ancho estándar del contenedor (1300px) solo en esta página */
+.shop-container-wide {
+  max-width: 1900px; /* Nuevo ancho máximo para la tienda */
+  padding-left: 0.5rem;  /* Reducir padding horizontal */
+  padding-right: 0.5rem; /* Reducir padding horizontal */
+}
+
+/* 2. Ajusta el espaciado entre el filtro y los productos */
+.shop-layout {
+  gap: 1.5rem; /* Reducido de 3rem a 1.5rem para acercar las columnas */
+}
+
 /* Estado sin productos */
 .no-products {
   grid-column: 1 / -1;
