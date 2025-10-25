@@ -83,6 +83,29 @@
     </div>
   </header>
 
+    <!-- Carrito lateral -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>TU CARRITO</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+      <div class="empty-cart-message">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Tu carrito está vacío</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-amount" id="totalAmount">$0 MXN</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">PROCEDER AL PAGO</button>
+      <button class="btn-continue-shopping" id="continueShopping">SEGUIR COMPRANDO</button>
+    </div>
+  </div>
+
   <div class="cart-sidebar" id="cartSidebar"></div>
   <div class="cart-overlay" id="cartOverlay"></div>
 
