@@ -613,6 +613,10 @@ body {
 .product-info {
   padding: 1.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
 }
 
 .product-info h3 {
@@ -628,7 +632,7 @@ body {
   font-size: 0.9rem;
   color: var(--dark-gray);
   margin-bottom: 1rem;
-  min-height: 40px;
+  min-height: 50px;
   line-height: 1.4;
 }
 
