@@ -1,7 +1,3 @@
-/* ================================== */
-/* PÁGINA DE PRODUCTO                 */
-/* ================================== */
-
 /* Breadcrumb */
 .breadcrumb {
   background: var(--light-gray);
@@ -92,6 +88,10 @@
   width: 100%;
   height: 80px;
   object-fit: cover;
+}
+
+.product-details-container{
+ min-height: 80vh;
 }
 
 /* Información del producto */
@@ -470,6 +470,11 @@
 
 /* ======= RESPONSIVE PÁGINA PRODUCTO ======= */
 @media (max-width: 992px) {
+
+  .product-details-container {
+    min-height: 100vh; 
+  }
+
   .product-details-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -485,6 +490,7 @@
 }
 
 @media (max-width: 768px) {
+  
   .image-thumbnails {
     grid-template-columns: repeat(2, 1fr);
   }
